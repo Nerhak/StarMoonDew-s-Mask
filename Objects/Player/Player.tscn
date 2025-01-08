@@ -1,0 +1,116 @@
+[gd_scene load_steps=14 format=3 uid="uid://b6u1w61rxr6rh"]
+
+[ext_resource type="Texture2D" uid="uid://dr52v76kevl2t" path="res://Assets/Characters/Farmer/Farmer_base_bald.png" id="1_5ou5s"]
+[ext_resource type="Script" path="res://Scripts/Player/Player.cs" id="1_7k4a1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xxtxw"]
+radius = 7.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1wc2"]
+atlas = ExtResource("1_5ou5s")
+region = Rect2(0, 576, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45kpg"]
+atlas = ExtResource("1_5ou5s")
+region = Rect2(0, 608, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45lc3"]
+atlas = ExtResource("1_5ou5s")
+region = Rect2(0, 640, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvpf6"]
+atlas = ExtResource("1_5ou5s")
+region = Rect2(16, 576, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oa1yt"]
+atlas = ExtResource("1_5ou5s")
+region = Rect2(32, 576, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8q8u"]
+atlas = ExtResource("1_5ou5s")
+region = Rect2(16, 608, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlv2h"]
+atlas = ExtResource("1_5ou5s")
+region = Rect2(32, 608, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1pb7"]
+atlas = ExtResource("1_5ou5s")
+region = Rect2(16, 640, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ycff"]
+atlas = ExtResource("1_5ou5s")
+region = Rect2(32, 640, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_71owy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1wc2")
+}],
+"loop": true,
+"name": &"Idle Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45kpg")
+}],
+"loop": true,
+"name": &"Idle Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45lc3")
+}],
+"loop": true,
+"name": &"Idle Up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jvpf6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oa1yt")
+}],
+"loop": true,
+"name": &"Walk Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8q8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jlv2h")
+}],
+"loop": true,
+"name": &"Walk Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x1pb7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ycff")
+}],
+"loop": true,
+"name": &"Walk Up",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_7k4a1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_xxtxw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_71owy")
+animation = &"Walk Up"
+frame = 1
+frame_progress = 0.726802

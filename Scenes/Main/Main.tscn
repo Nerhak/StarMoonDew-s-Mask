@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://1q5mn4uqu2j8"]
+
+[ext_resource type="Script" path="res://Scripts/Main/Main.cs" id="1_0rhwa"]
+[ext_resource type="Texture2D" uid="uid://cwo6rhvpa4afr" path="res://Icon.svg" id="2_1j7id"]
+[ext_resource type="Script" path="res://Scenes/Main/PlayButton.cs" id="3_eds7b"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_0rhwa")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(792, 114)
+texture = ExtResource("2_1j7id")
+
+[node name="PlayButton" type="Button" parent="."]
+offset_left = 304.0
+offset_top = 176.0
+offset_right = 345.0
+offset_bottom = 207.0
+action_mode = 0
+text = "Play"
+script = ExtResource("3_eds7b")
