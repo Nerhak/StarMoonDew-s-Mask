@@ -4,7 +4,8 @@
 [ext_resource type="Script" path="res://Scripts/Player/Player.cs" id="1_7k4a1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xxtxw"]
-radius = 7.0
+radius = 8.0
+height = 22.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s1wc2"]
 atlas = ExtResource("1_5ou5s")
@@ -102,7 +103,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_7k4a1")
 
@@ -111,6 +112,8 @@ shape = SubResource("CapsuleShape2D_xxtxw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_71owy")
-animation = &"Walk Up"
-frame = 1
-frame_progress = 0.726802
+animation = &"Idle Down"
+autoplay = "Idle Down"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.5, 2.5)
