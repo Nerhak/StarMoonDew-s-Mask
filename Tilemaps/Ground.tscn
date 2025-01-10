@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://7x6jl374hn1x"]
+
+[ext_resource type="Texture2D" uid="uid://bk2cthpn2a51g" path="res://Assets/Tilesets/townInterior.png" id="1_j7poq"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wvfd7"]
+texture = ExtResource("1_j7poq")
+8:6/0 = 0
+7:8/0 = 0
+7:6/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+8:8/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_qoack"]
+sources/0 = SubResource("TileSetAtlasSource_wvfd7")
+
+[node name="Ground" type="TileMapLayer"]
+tile_set = SubResource("TileSet_qoack")
