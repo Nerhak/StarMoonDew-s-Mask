@@ -487,6 +487,7 @@ zoom = Vector2(2.5, 2.5)
 [node name="Appearance" type="Node2D" parent="."]
 
 [node name="Body" type="AnimatedSprite2D" parent="Appearance"]
+visible = false
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_rr6ir")
 animation = &"Idle - Down"
@@ -495,10 +496,12 @@ autoplay = "Idle - Down"
 [node name="Arms" type="AnimatedSprite2D" parent="Appearance"]
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_mwigh")
-animation = &"Walk - Down"
+animation = &"Walk - Right"
 autoplay = "Idle - Down"
+frame_progress = 0.586374
 
 [node name="Shirt" type="AnimatedSprite2D" parent="Appearance"]
+visible = false
 y_sort_enabled = true
 position = Vector2(0, 3)
 sprite_frames = SubResource("SpriteFrames_f7kxr")
@@ -506,6 +509,7 @@ animation = &"Walk - Up"
 autoplay = "Idle - Down"
 
 [node name="Pants" type="AnimatedSprite2D" parent="Appearance"]
+visible = false
 y_sort_enabled = true
 position = Vector2(0, 8)
 sprite_frames = SubResource("SpriteFrames_214tl")
@@ -513,6 +517,7 @@ animation = &"Walk - Down"
 autoplay = "Idle - Down"
 
 [node name="Hair" type="AnimatedSprite2D" parent="Appearance"]
+visible = false
 y_sort_enabled = true
 position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_sjng1")
